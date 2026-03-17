@@ -1,73 +1,115 @@
-# React + TypeScript + Vite
+# 🌐 Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Full Stack Developer Portfolio** built using React and Tailwind CSS to showcase my projects, skills, certifications, and achievements.
 
-Currently, two official plugins are available:
+🚀 Designed with interactive UI, animations, and a responsive layout to create an engaging experience for visitors and recruiters.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🔗 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 https://himanshuChaudhary556.vercel.app
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* 🎨 Modern UI with glowing and animated components
+* 📂 Interactive **Projects Showcase**
+* 🎓 **Education, Achievements & Certifications** sections
+* 🎯 Smooth animations and transitions
+* 📱 Fully **responsive design** for all devices
+* 🧠 Interactive **carousel and dynamic sections**
+* 📧 Contact section with social links
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠 Tech Stack
+
+**Frontend**
+
+* React
+* TypeScript
+* Tailwind CSS
+
+**Libraries & Tools**
+
+* Framer Motion (animations)
+* Lucide React (icons)
+* Swiper.js (carousel)
+* Vite (build tool)
+
+**Deployment**
+
+* Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+portfolio
+│
+├── public
+│   ├── hobbies
+│   ├── projects
+│
+├── src
+│   ├── components
+│   │   ├── Hero
+│   │   ├── Projects
+│   │   ├── Education
+│   │   ├── Achievements
+│   │   ├── Certificates
+│   │   ├── Hobbies
+│   │   └── Contact
+│   │
+│   ├── App.tsx
+│   └── main.tsx
+│
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository
+
 ```
+git clone https://github.com/yourusername/portfolio.git
+```
+
+Go into the project folder
+
+```
+cd portfolio
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Run the development server
+
+```
+npm run dev
+```
+
+---
+
+
+Example:
+
+* Hero Section
+* Projects Section
+* Hobbies Carousel
+* Contact Page
+
+---
+
+---
+
+⭐ If you like this project, consider giving it a star!
