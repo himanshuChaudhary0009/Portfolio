@@ -1,15 +1,5 @@
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { SiMongodb, SiJavascript } from "react-icons/si";
-import {
-  Atom,
-  Code,
-  Database,
-  Globe,
-  Server,
-  GitBranch,
-  Cpu,
-  Layers
-} from "lucide-react";
 export default function FloatingIcons() {
 
   return (

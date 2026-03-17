@@ -207,7 +207,7 @@
 }
 .gradient-text{
   background: linear-gradient(90deg,#a3e635,#4ade80);
-  -webkit-background-clip:text;
+  -webkit-bg-clip:text;
   -webkit-text-fill-color:transparent;
 }
 /* perspective for 3D */

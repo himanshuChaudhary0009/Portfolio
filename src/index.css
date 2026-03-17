@@ -49,6 +49,6 @@ section{
   );
   background-size: 200%;
   animation: textGradient 6s linear infinite;
-  -webkit-background-clip: text;
+  -webkit-bg-clip: text;
   -webkit-text-fill-color: transparent;
 }

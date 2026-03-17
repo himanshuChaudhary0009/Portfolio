@@ -4,12 +4,12 @@ import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Education from "./components/Education"
 import Contact from "./components/Contact"
-import About from "./components/About";
+import About from "./components/About"
 import Certificates from "./components/Certificates";
 import CursorGlow from "./components/CursorGlow";
 import Achievements from "./components/Achievements";
 import LiveBackground from "./components/LiveBackground";
-import Hobbies from "./components/Hobbies"
+import Hobbies from "./components/Hobbies";
 function App(){
 
 return(
