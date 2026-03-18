@@ -19,11 +19,11 @@ const education = [
     side: "right"
   },
   {
-    school: "Maharishi Markendeshwar School",
+    school: "Maharishi Markendeshwar International School",
     degree: "Matriculation",
     location: "Ambala, Haryana",
     date: "Apr '20 - Mar '21",
-    score: "Percentage: 87%",
+    score: "Percentage: 96%",
     side: "left"
   }
 ];
