@@ -210,172 +210,128 @@
   -webkit-bg-clip:text;
   -webkit-text-fill-color:transparent;
 }
-/* perspective for 3D */
-.perspective{
-perspective:1200px;
-transform-style:preserve-3d;
+/* Swiper container perspective */
+.hobby-swiper {
+  perspective: 1200px;
+  padding: 40px 0;
+}
+.hobby-swiper .swiper-wrapper {
+  align-items: center;
+}
+/* Each slide must NOT stretch */
+.hobby-swiper .swiper-slide {
+  width: 280px !important; /* FIXES your issue */
+  display: flex;
+  justify-content: center;
 }
 
-/* 3D card positioning */
-.card-3d{
-transform-style:preserve-3d;
-transform-origin:center;
-translate:-50% -50%;
+/* Card */
+.hobby-card {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+
+  transform: scale(0.75);
+  opacity: 0.4;
+  transition: all 0.5s ease;
 }
 
-/* glassmorphism */
-.glass-card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-border:1px solid rgba(163,230,53,0.3);
-padding:20px;
-border-radius:16px;
-box-shadow:0 0 25px rgba(163,230,53,0.2);
-transition:0.3s;
+/* Image */
+.hobby-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
-/* glow hover */
-.glass-card:hover{
-box-shadow:0 0 40px rgba(163,230,53,0.5);
-transform:scale(1.05);
+/* Title */
+.hobby-title {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-/* magnetic hover */
-.magnetic{
-transition:transform 0.2s ease;
+/* CENTER */
+.swiper-slide-active .hobby-card {
+  transform: scale(1.1) translateY(-20px);
+  opacity: 1;
+  z-index: 10;
 }
 
-.magnetic:hover{
-transform:translateY(-6px) scale(1.08);
-}
-.hobby-card{
-width:260px;
-padding:18px;
-border-radius:16px;
-
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(14px);
-
-border:1px solid rgba(163,230,53,0.3);
-
-box-shadow:0 0 25px rgba(163,230,53,0.2);
-
-transition:0.4s;
+/* LEFT */
+.swiper-slide-prev .hobby-card {
+  transform: rotateY(25deg) scale(0.9);
+  opacity: 0.7;
 }
 
-.hobby-card:hover{
-transform:scale(1.08);
-box-shadow:0 0 45px rgba(163,230,53,0.5);
-}
-.carousel-card{
-
-width:260px;
-padding:18px;
-
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-
-border-radius:18px;
-
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(14px);
-
-border:1px solid rgba(163,230,53,0.3);
-
-box-shadow:0 0 25px rgba(163,230,53,0.15);
-
-transition:0.4s;
-
+/* RIGHT */
+.swiper-slide-next .hobby-card {
+  transform: rotateY(-25deg) scale(0.9);
+  opacity: 0.7;
 }
 
-.carousel-card:hover{
-
-transform:translateX(-50%) scale(1.08);
-
-box-shadow:0 0 40px rgba(163,230,53,0.5);
-
+/* EXTRA LEFT */
+.swiper-slide-prev-prev .hobby-card {
+  transform: rotateY(40deg) scale(0.75);
+  opacity: 0.4;
 }
 
-/* spotlight glow under center */
-
-.spotlight{
-
-position:absolute;
-bottom:40px;
-left:50%;
-
-transform:translateX(-50%);
-
-width:420px;
-height:120px;
-
-background:radial-gradient(
-ellipse,
-rgba(163,230,53,0.35),
-transparent
-);
-
-filter:blur(40px);
-
-pointer-events:none;
-
+/* EXTRA RIGHT */
+.swiper-slide-next-next .hobby-card {
+  transform: rotateY(-40deg) scale(0.75);
+  opacity: 0.4;
+}
+/* Overlay container */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  pointer-events: none;
 }
 
+/* Big cinematic name */
+.hero-name {
+  font-size: clamp(60px, 10vw, 140px);
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 
-/* semi circle mask */
+  /* BLEND MAGIC */
+  color: white;
+  mix-blend-mode: overlay;
 
-.semi-carousel{
+  /* Glow */
+  text-shadow:
+    0 0 20px rgba(132, 204, 22, 0.6),
+    0 0 60px rgba(132, 204, 22, 0.3);
 
-width:1200px;
-height:420px;
-
-overflow:hidden;
-
-mask-image: radial-gradient(
-ellipse at center bottom,
-black 60%,
-transparent 100%
-);
-
--webkit-mask-image: radial-gradient(
-ellipse at center bottom,
-black 60%,
-transparent 100%
-);
-
+  opacity: 0;
+  transform: scale(1.2);
+  animation: heroReveal 1.5s ease forwards;
 }
 
-/* swiper slide alignment */
-
-.swiper-slide{
-display:flex;
-justify-content:center;
-align-items:center;
+/* Animation */
+@keyframes heroReveal {
+  0% {
+    opacity: 0;
+    transform: scale(1.3);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0.15; /* stays faint in background */
+    transform: scale(1);
+  }
 }
 
-/* big hobby cards */
-
-.hobby-card{
-
-width:420px;
-padding:22px;
-
-border-radius:20px;
-
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(14px);
-
-border:1px solid rgba(163,230,53,0.3);
-
-box-shadow:0 0 30px rgba(163,230,53,0.2);
-
-transition:0.4s;
-}
-
-/* glow hover */
-
-.hobby-card:hover{
-transform:scale(1.06);
-box-shadow:0 0 55px rgba(163,230,53,0.5);
-}

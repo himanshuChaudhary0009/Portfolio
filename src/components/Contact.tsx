@@ -10,7 +10,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto text-center mb-16">
 
         <h2 className="text-4xl font-bold mb-4">
-          <span className="gradient-text">Get In Touch</span>
+          <span className="text-white">Get In Touch</span>
         </h2>
 
         <p className="text-gray-400 max-w-xl mx-auto">

@@ -2,7 +2,6 @@ import FloatingIcons from "./FloatingIcons";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { Github, Linkedin, Mail, FolderKanban, Download } from "lucide-react";
-import AIBrain from "./AIBrain";
 import useParallax from "./useParallax";
 
 export default function Hero() {
@@ -39,10 +38,10 @@ useParallax(heroRef);
           AVAILABLE FOR OPPORTUNITIES
         </p>
 
-        <h1 className="text-6xl md:text-7xl font-bold mb-4">
-          <span className="gradient-text">Himanshu Chaudhary</span><AIBrain />
+        <h1 className="text-6xl md:text-7xl font-bold mb-4 relative">
+          <span className=" text-white">Himanshu Chaudhary</span>
         </h1>
-
+        
         <h2 className="text-2xl text-lime-400 mb-6">
           <span ref={typedRef}></span>
         </h2>
@@ -129,4 +128,4 @@ useParallax(heroRef);
 
     </section>
   );
-}
+} 

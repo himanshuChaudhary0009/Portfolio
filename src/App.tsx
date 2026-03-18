@@ -9,7 +9,7 @@ import Certificates from "./components/Certificates";
 import CursorGlow from "./components/CursorGlow";
 import Achievements from "./components/Achievements";
 import LiveBackground from "./components/LiveBackground";
-import Hobbies from "./components/Hobbies";
+
 function App(){
 
 return(
@@ -23,7 +23,6 @@ return(
 <Hero/>
 <About />
 <Skills/>
-<Hobbies />
 <Projects/>
 <Education/>
 <Certificates />
