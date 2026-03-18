@@ -8,7 +8,7 @@ A modern **Full Stack Developer Portfolio** built using React and Tailwind CSS t
 
 ## 🔗 Live Demo
 
-👉 https://himanshuChaudhary556.vercel.app
+👉 https://himanshu-chaudhary-portfolio-beta.vercel.app/
 
 ---
 
